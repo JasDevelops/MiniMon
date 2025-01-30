@@ -1,0 +1,262 @@
+:root {
+	--yellow: #ffd60a;
+	--green: #b1d690;
+	--orange: #ffa24c;
+	--pink: #f05365;
+	--blue: #80c4e9;
+	--black: #000;
+	--lilac: #bd93bd;
+}
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	max-width: 1400px;
+	margin: 0 auto;
+	background-color: var(--yellow);
+}
+
+h1,
+.modal-title {
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: 900;
+	color: var(--black);
+}
+.container-fluid {
+	padding: 0;
+}
+.pokemon-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 15px;
+	padding-left: 0;
+}
+
+.pokemon-list li {
+	flex: 1 1 calc(33.333% - 30px);
+	max-width: calc(33.333% - 30px);
+	padding: 15px;
+	border: 5px solid var(--black);
+	border-radius: 1px;
+	text-align: center;
+	transition: transform 0.3s ease;
+}
+
+.pokemon-list li:nth-child(5n + 1) {
+	background-color: var(--green);
+}
+.pokemon-list li:nth-child(5n + 2) {
+	background-color: var(--orange);
+}
+.pokemon-list li:nth-child(5n + 3) {
+	background-color: var(--pink);
+}
+.pokemon-list li:nth-child(5n + 4) {
+	background-color: var(--blue);
+}
+.pokemon-list li:nth-child(5n + 5) {
+	background-color: var(--lilac);
+}
+
+.pokemon-list li:hover,
+.pokemon-list li:focus,
+.btn:hover,
+.btn:focus {
+	transform: scale(1.02);
+	filter: brightness(90%);
+}
+
+.pokemon-list button {
+	background: none;
+	border: none;
+	font-size: 17px;
+	text-transform: uppercase;
+	font-weight: 900;
+	color: var(--black);
+}
+.pokemon-list button:hover,
+.pokemon-list button:focus,
+.pokemon-list button:active,
+.btn-check:checked + .btn,
+.btn.active,
+.btn.show,
+.btn:first-child:active,
+:not(.btn-check) + .btn:active {
+	background: none;
+}
+.btn-secondary {
+	background-color: var(--black);
+	border: none;
+	border-radius: 1px;
+}
+#search-input::placeholder {
+	color: transparent;
+	transition: color 0.3s ease-in-out;
+}
+
+#search-input:hover::placeholder,
+#search-input:focus::placeholder {
+	font-style: italic;
+	color: white;
+}
+
+#search-input {
+	font-size: 13px;
+	text-transform: uppercase;
+	min-width: 195px;
+	border: none;
+	border-bottom: 5px solid white;
+	background: none;
+	border-radius: 0;
+	font-weight: 600;
+}
+
+#search-suggestion {
+	top: 105%;
+	left: -3px;
+	max-height: 250px;
+	overflow-y: auto;
+}
+.dropdown-menu.show {
+	max-width: 100px;
+}
+#search-suggestion,
+.dropdown-menu.show {
+	background: white;
+	z-index: 1050;
+	border: none;
+	border-radius: 1px;
+}
+.dropdown-menu[data-bs-popper] {
+	min-width: 100px !important;
+	max-width: 100px;
+}
+#search-suggestion .list-group-item,
+.dropdown-item {
+	padding: 8px 12px;
+	cursor: pointer;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 500;
+	color: var(--black);
+}
+
+#search-suggestion .list-group-item:hover,
+.dropdown-menu.show li:hover,
+.dropdown-item:active {
+	background-color: #fafafa;
+	color: var(--black);
+}
+#search-suggestion .list-group-item:active,
+.dropdown-item:active {
+	font-weight: 900;
+}
+
+.btn-outline-light {
+	border: none;
+	background: none;
+}
+.btn-outline-light:hover,
+.btn-outline-light:focus {
+	transform: scale(1.02);
+	color: white;
+	filter: brightness(100%);
+	background: none;
+}
+.dropdown-toggle.btn {
+	font-weight: 600;
+	text-transform: uppercase;
+	font-size: 14px;
+}
+.dropdown-toggle.btn:active {
+	color: white;
+}
+
+.form-control:hover,
+.form-control:focus,
+.navbar-toggler:focus {
+	box-shadow: none;
+}
+.modal-content {
+	border-radius: 1px;
+	text-align: center;
+	color: var(--black);
+	font-size: 13px;
+	text-transform: uppercase;
+	font-weight: 500;
+	border: 5px solid var(--black);
+}
+.modal-header,
+.modal-footer {
+	border: none;
+}
+.modal-footer {
+	margin: 0 auto;
+}
+
+#search-form {
+	width: 100%;
+	max-width: 250px;
+}
+.navbar-toggler {
+	position: relative;
+	border: none;
+	background: none;
+}
+
+.navbar-toggler-icon {
+	transition: transform 0.3s ease-in-out;
+}
+
+.navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
+	transform: rotate(45deg);
+	background-image: none;
+}
+
+.navbar-toggler[aria-expanded='true']::before,
+.navbar-toggler[aria-expanded='true']::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 20px;
+	height: 2px;
+	background: var(--black);
+	transform-origin: center;
+}
+
+.navbar-toggler[aria-expanded='true']::before {
+	transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.navbar-toggler[aria-expanded='true']::after {
+	transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+@media (max-width: 992px) {
+	.pokemon-list li {
+		flex: 1 1 calc(50% - 30px);
+		max-width: calc(50% - 30px);
+	}
+}
+@media (max-width: 768px) {
+	.navbar-nav {
+		margin-top: 20px;
+	}
+	.dropdown-toggle.btn {
+		margin-top: 10px;
+	}
+}
+@media (max-width: 600px) {
+	.pokemon-list li {
+		flex: 1 1 calc(100% - 30px);
+		max-width: calc(100% - 30px);
+	}
+}
