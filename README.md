@@ -40,7 +40,7 @@ Feel free to submit issues or pull requests. Contributions are welcome!
 This project is licensed under the MIT License.
 
 ## Acknowledgments:
-**PokéAPI** for providing Pokémon data
-**Bootstrap** for styling and responsive components
-**GitHub Pages** for hosting
-**CareerFoundry** for guidance
+- **PokéAPI** for providing Pokémon data
+- **Bootstrap** for styling and responsive components
+- **GitHub Pages** for hosting
+- **CareerFoundry** for guidance
