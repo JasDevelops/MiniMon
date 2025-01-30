@@ -16,7 +16,7 @@ MiniMon is a simple JavaScript project, that displays information about Pokémon
 - **HTML5:** structure of application
 - **CSS3:** Styling 
 - **Javascript (ES6):** Functionality, incl. API requests, DOM manipulation, event handling and IIFE
-- **Bootstrap 5.3:** responsive design ans modals
+- **Bootstrap 5.3:** responsive design and modals
 - **PokéAPI:** data source for Pokémon information
 - **GitHub Pages:** deployment platform
 
